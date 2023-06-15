@@ -9,25 +9,25 @@ const todoUl = document.querySelector('.todoList');
 //   isComplete: false
 // }
 
-let todoList = [
-  {
-    id: 1,
-    todo: '공부하기',
-    isComplete: false,
-  },
-  {
-    id: 2,
-    todo: '밥 먹기',
-    isComplete: false,
-  },
-  {
-    id: 3,
-    todo: '산책하기',
-    isComplete: false,
-  },
-];
+// let todoList = [
+//   {
+//     id: 1,
+//     todo: '공부하기',
+//     isComplete: false,
+//   },
+//   {
+//     id: 2,
+//     todo: '밥 먹기',
+//     isComplete: false,
+//   },
+//   {
+//     id: 3,
+//     todo: '산책하기',
+//     isComplete: false,
+//   },
+// ];
 
-// const todoList = [];
+let todoList = [];
 
 console.log('form', formEl);
 const handleSubmit = (event) => {
@@ -79,6 +79,7 @@ const handleDelete = (event) => {
 
   // 데이터 삭제
   todoList = todoList.filter((todo) => todo.id !== Number(id));
+  console.log('todoList', todoList);
 
   // UI 삭제
   li.remove();
